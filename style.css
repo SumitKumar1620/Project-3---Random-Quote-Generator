@@ -1,0 +1,163 @@
+:root{
+    --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --panel-shadow: 0 0 1.5rem rgba(255,255,255,0.6);
+    --button-background-color:rgba(34, 76, 227, 0.861);
+    --button-hover-color:rgba(34, 76, 227, 0.61);
+    --primary-text-color:white;
+    --button-shadow: 0 0 0.5rem rgba(255,255,255,0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1716388343057-9199e096ffaf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position:center;
+    font-family: var(--primary-font);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: brightness(40%);
+}
+
+.quote-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    text-align: center;
+    gap: 1rem;
+    padding:2rem;
+    width:40rem;
+    box-shadow: var(--panel-shadow);
+    border-radius: 1rem;
+    color: var(--primary-text-color);
+    position: relative;
+}
+
+.spl-feature{
+    display: flex;
+    gap:0.2rem;
+}
+
+.clipboard{
+    cursor: pointer;
+}
+
+.speak{
+    cursor:pointer;
+}
+
+.speak:hover, .clipboard:hover{
+    background-color: var(--button-hover-color);
+}
+
+.quote-box h1{
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-weight:900;
+    font-size: 23pt;
+    text-decoration: underline;
+    margin-bottom: 1.25rem;
+}
+
+.quote-box p{
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    font-size: 13pt;
+    margin-bottom: 1rem;
+    height: 6rem;
+}
+
+.quote-box p::before, .quote-box p::after{
+    content:' " ';
+}
+
+.quote-box span{
+    letter-spacing: 0.1rem;
+    font-size: 10pt;
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    align-self: center;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.quote-box span::before{
+    content: 'Author - ';
+}
+
+.quote-box .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+.quote-box button{
+    line-height: 2.5rem;
+    border-radius: 1rem;
+    border:none;
+    padding: 0 1rem;
+    background-color: var(--button-background-color);
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box .btn-tweet{
+    display: flex;
+    gap:0.4rem;
+    background-color: var(--primary-text-color);
+    color: var(--button-background-color);
+    transition: all 0.5s ease-in-out;
+} 
+
+.quote-box .btn-quote{
+    transition: all 0.5s ease-in-out;
+}
+
+.quote-box .btn-quote:hover{
+    background-color:  var(--button-hover-color);
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.quote-box .btn-tweet:hover{
+    display: flex;
+    gap:0.4rem;
+    background-color: var(--button-hover-color);
+    color: var(--primary-text-color);
+    box-shadow: var(--button-shadow);
+    transform: scale(1.05);
+} 
+
+.quote-box input{
+    line-height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 1rem;
+    color: var(--primary-text-color);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    width: 70%;
+    align-self: center;
+    border-radius: 1rem;
+    border:none;
+}
+
+.quote-box input::placeholder{
+    text-align: center;
+}
+
